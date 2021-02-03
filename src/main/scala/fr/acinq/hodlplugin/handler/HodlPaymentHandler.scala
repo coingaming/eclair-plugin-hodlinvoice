@@ -83,7 +83,7 @@ class HodlPaymentHandler(kit: Kit)(implicit system: ActorSystem) extends Receive
       resultString
   }
   def createHodlInvoice (description: String, amount_opt: Option[MilliSatoshi], expire_opt: Option[Long], fallbackAddress_opt: Option[String], paymentHash: ByteVector32)(implicit timeout: Timeout): String = {
-    eclairApi.receive(description, amount_opt, expire_opt, fallbackAddress_opt, paymentHash)
+    eclairApi.receive(description, amount_opt, expire_opt, fallbackAddress_opt, None, Some(paymentHash))
     s"hodl invoice created"
   }
 }
