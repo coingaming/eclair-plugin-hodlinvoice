@@ -18,22 +18,26 @@ package fr.acinq.hodlplugin.handler
 
 import akka.actor.Actor.Receive
 import akka.actor.{ActorContext, ActorRef, ActorSystem}
-import akka.event.{DiagnosticLoggingAdapter, LoggingAdapter}
+import akka.event.DiagnosticLoggingAdapter
+import akka.util.Timeout
 import fr.acinq.bitcoin.ByteVector32
-import fr.acinq.eclair.{Logs, NodeParams}
-import fr.acinq.eclair.payment.PaymentReceived
+import fr.acinq.eclair.payment.{PaymentReceived, PaymentRequest}
 import fr.acinq.eclair.payment.receive.MultiPartPaymentFSM.{MultiPartPaymentFailed, MultiPartPaymentSucceeded}
 import fr.acinq.eclair.payment.receive.{MultiPartPaymentFSM, ReceiveHandler}
 import fr.acinq.eclair.wire.IncorrectOrUnknownPaymentDetails
+import fr.acinq.eclair.{Eclair, EclairImpl, Kit, Logs, MilliSatoshi, NodeParams}
 import fr.acinq.hodlplugin.handler.HodlPaymentHandler.CleanupHodlPayment
 
 import scala.collection.mutable
 import scala.concurrent.duration._
+import scala.concurrent.Future
 
-class HodlPaymentHandler(nodeParams: NodeParams, paymentHandler: ActorRef)(implicit system: ActorSystem) extends ReceiveHandler {
-
+class HodlPaymentHandler(kit: Kit)(implicit system: ActorSystem) extends ReceiveHandler {
+  val nodeParams: NodeParams = kit.nodeParams
+  val paymentHandler: ActorRef = kit.paymentHandler
   implicit val ec = system.dispatcher
   val logger = system.log
+  val eclairApi: Eclair = new EclairImpl(kit)
 
   val hodlingPayments: mutable.Set[MultiPartPaymentSucceeded] = mutable.Set.empty
 
@@ -78,7 +82,10 @@ class HodlPaymentHandler(nodeParams: NodeParams, paymentHandler: ActorRef)(impli
       hodlingPayments -= mps
       resultString
   }
-
+  def createHodlInvoice (description: String, amount_opt: Option[MilliSatoshi], expire_opt: Option[Long], fallbackAddress_opt: Option[String], paymentHash: ByteVector32)(implicit timeout: Timeout): String = {
+    eclairApi.receive(description, amount_opt, expire_opt, fallbackAddress_opt, paymentHash)
+    s"hodl invoice created"
+  }
 }
 
 object HodlPaymentHandler {

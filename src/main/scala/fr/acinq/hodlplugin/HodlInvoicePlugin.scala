@@ -19,7 +19,7 @@ package fr.acinq.hodlplugin
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
 import com.typesafe.config.Config
-import fr.acinq.eclair.{Kit, Plugin, Setup}
+import fr.acinq.eclair.{Kit, Plugin, Setup, PluginParams}
 import fr.acinq.hodlplugin.api.Service
 import fr.acinq.hodlplugin.handler.HodlPaymentHandler
 import grizzled.slf4j.Logging
@@ -31,6 +31,10 @@ class HodlInvoicePlugin extends Plugin with Logging {
   var conf: Config = null
   var kit: Kit = null
 
+  override def params: PluginParams = {
+    new HodlInvoiceParams()
+  }
+
   override def onSetup(setup: Setup): Unit = {
     conf = setup.config
   }
@@ -41,7 +45,7 @@ class HodlInvoicePlugin extends Plugin with Logging {
     implicit val ec = kit.system.dispatcher
     implicit val materializer = ActorMaterializer()
 
-    val hodlHandler = new HodlPaymentHandler(kit.nodeParams, kit.paymentHandler)
+    val hodlHandler = new HodlPaymentHandler(kit)
     kit.paymentHandler ! hodlHandler
 
     val apiService = new Service(conf, kit.system, hodlHandler)
@@ -50,4 +54,8 @@ class HodlInvoicePlugin extends Plugin with Logging {
     logger.info(s"ready")
   }
 
+}
+
+class HodlInvoiceParams() extends PluginParams {
+  override def name: String = "Hodl Invoice Plugin"
 }

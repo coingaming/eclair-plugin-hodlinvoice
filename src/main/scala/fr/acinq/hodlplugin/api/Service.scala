@@ -17,11 +17,17 @@
 package fr.acinq.hodlplugin.api
 
 import akka.actor.ActorSystem
+import akka.http.scaladsl.server.directives.FormFieldDirectives.FieldSpec
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.server.directives.Credentials
 import com.typesafe.config.Config
+import fr.acinq.bitcoin.ByteVector32
+import fr.acinq.eclair.MilliSatoshi
 import fr.acinq.eclair.api.ExtraDirectives
+import fr.acinq.eclair.api.FormParamExtractors._
+import fr.acinq.eclair.api.FormParamExtractors.sha256HashUnmarshaller
 import fr.acinq.hodlplugin.handler.HodlPaymentHandler
+import kamon.metric.MeasurementUnit.time.seconds
 
 import scala.concurrent.Future
 import scala.concurrent.duration._
@@ -44,11 +50,17 @@ class Service(conf: Config, system: ActorSystem, hodlPaymentHandler: HodlPayment
 
   val route: Route = authenticateBasicAsync(realm = "Access restricted", userPassAuthenticator) { _ =>
     post {
-      formField(paymentHashFormParam) { ph =>
-        path("hodlaccept") {
+      path("hodlaccept") {
+        formFields(paymentHashFormParam) { ph =>
           complete(hodlPaymentHandler.acceptPayment(ph))
-        } ~ path("hodlreject") {
+        }
+      } ~ path("hodlreject") {
+        formFields(paymentHashFormParam) { ph =>
           complete(hodlPaymentHandler.rejectPayment(ph))
+        }
+      } ~ path("createinvoice") {
+        formFields("description".as[String], amountMsatFormParam.?, "expireIn".as[Long].?, "fallbackAddress".as[String].?, "paymentHash".as[ByteVector32](sha256HashUnmarshaller)) { (desc, amountMsat, expire, fallBackAddress, paymentHash) =>
+          complete(hodlPaymentHandler.createHodlInvoice(desc, amountMsat, expire, fallBackAddress, paymentHash)(timeout = 5 seconds))
         }
       }
     }
