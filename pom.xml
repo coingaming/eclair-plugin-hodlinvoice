@@ -205,7 +205,10 @@
             <artifactId>akka-cluster-tools_${scala.version.short}</artifactId>
             <version>${akka.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-install-plugin</artifactId>
+            <version>2.5.2</version>
+        </dependency>
     </dependencies>
-
 </project>
