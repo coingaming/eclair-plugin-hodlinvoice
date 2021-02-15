@@ -1,0 +1,477 @@
+{
+  "artifactId": "eclair-hodlplugin_2.11",
+  "deps": [
+    {
+      "path": "asm/asm-parent/3.3.1/asm-parent-3.3.1.pom",
+      "sha1": "72945d9cb6faa5082dcd190da850aa06760e4350"
+    },
+    {
+      "path": "asm/asm/3.3.1/asm-3.3.1.jar",
+      "sha1": "1d5f20b4ea675e6fab6ab79f1cd60ec268ddc015"
+    },
+    {
+      "path": "asm/asm/3.3.1/asm-3.3.1.pom",
+      "sha1": "bbcde0189656fa6cc671f27437432ac7e7f95673"
+    },
+    {
+      "path": "commons-codec/commons-codec/1.11/commons-codec-1.11.jar",
+      "sha1": "3acb4705652e16236558f0f4f2192cc33c3bd189"
+    },
+    {
+      "path": "commons-validator/commons-validator/1.2.0/commons-validator-1.2.0.jar",
+      "sha1": "13dcebc00d206605bea72f6191b80370eb3ca805"
+    },
+    {
+      "path": "commons-validator/commons-validator/1.2.0/commons-validator-1.2.0.pom",
+      "sha1": "a7992acb52332d17c1bd9f7f774361b68b183c23"
+    },
+    {
+      "path": "org/apache/maven/doxia/doxia-sink-api/1.0-alpha-10/doxia-sink-api-1.0-alpha-10.pom",
+      "sha1": "80e28b4d518236464c97722dd9aa53092af181a7"
+    },
+    {
+      "path": "org/apache/maven/doxia/doxia/1.0-alpha-10/doxia-1.0-alpha-10.pom",
+      "sha1": "219a2deff42bccd82cd3d5775a86b95ce48d3dd4"
+    },
+    {
+      "path": "org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar",
+      "sha1": "c999ae305f22ecfc5a000dca12a39b9491778bd5"
+    },
+    {
+      "path": "org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom",
+      "sha1": "a46a65782b96c7624c0ff64b50a91ba2935d84f6"
+    },
+    {
+      "path": "org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.jar",
+      "sha1": "978c773786667a2f642b034e55fac72ad8215385"
+    },
+    {
+      "path": "org/apache/maven/maven-archiver/3.1.1/maven-archiver-3.1.1.pom",
+      "sha1": "00b65ea8dccdb84e4f8835c379f89116abc96066"
+    },
+    {
+      "path": "org/apache/maven/maven-artifact-manager/2.0.2/maven-artifact-manager-2.0.2.pom",
+      "sha1": "157c24fb3ec09b9a693f88dc571fc17ed0669cca"
+    },
+    {
+      "path": "org/apache/maven/maven-artifact-manager/2.0.5/maven-artifact-manager-2.0.5.pom",
+      "sha1": "cc2c71211f52ada0389f3d2c9de16dd1429eccd7"
+    },
+    {
+      "path": "org/apache/maven/maven-artifact-manager/2.2.0/maven-artifact-manager-2.2.0.pom",
+      "sha1": "91b2c4b9a4cb63846da595ff15df78ebc7f1b31f"
+    },
+    {
+      "path": "org/apache/maven/maven-artifact/2.2.0/maven-artifact-2.2.0.pom",
+      "sha1": "adf024bc80dcc83893fc712b9fff6f8d1f224fc6"
+    },
+    {
+      "path": "org/apache/maven/maven-model/2.2.0/maven-model-2.2.0.pom",
+      "sha1": "826351ed94e42205e27410676351e83486ec5bb2"
+    },
+    {
+      "path": "org/apache/maven/maven-parent/13/maven-parent-13.pom",
+      "sha1": "743843d9973c083b7755e4a26a9c2ac369608ab5"
+    },
+    {
+      "path": "org/apache/maven/maven-plugin-api/2.0.8/maven-plugin-api-2.0.8.pom",
+      "sha1": "df49abd86bcf9fd7a624562a7285049ebdd2f00e"
+    },
+    {
+      "path": "org/apache/maven/maven-plugin-registry/2.2.0/maven-plugin-registry-2.2.0.pom",
+      "sha1": "a28f479f5a2334f4018fd6812a6da2652a11d858"
+    },
+    {
+      "path": "org/apache/maven/maven-profile/2.0.5/maven-profile-2.0.5.pom",
+      "sha1": "d16b97a0ac60bf526c8a727dfa549a43ac57e519"
+    },
+    {
+      "path": "org/apache/maven/maven-profile/2.2.0/maven-profile-2.2.0.pom",
+      "sha1": "740bce07af0b724e8e79e62493b537e190d14c1f"
+    },
+    {
+      "path": "org/apache/maven/maven-project/2.0.5/maven-project-2.0.5.pom",
+      "sha1": "f8e28bec122e2092e91660758ede22e1f78744ee"
+    },
+    {
+      "path": "org/apache/maven/maven-project/2.2.0/maven-project-2.2.0.pom",
+      "sha1": "bce50c677b7219221db29b87470b6ba605ef0d3f"
+    },
+    {
+      "path": "org/apache/maven/maven-repository-metadata/2.0.2/maven-repository-metadata-2.0.2.pom",
+      "sha1": "f731304626897c68836461f0df5134f26aeddcf1"
+    },
+    {
+      "path": "org/apache/maven/maven-repository-metadata/2.0.5/maven-repository-metadata-2.0.5.pom",
+      "sha1": "64b711de2206859a37333e015c24451546278123"
+    },
+    {
+      "path": "org/apache/maven/maven-repository-metadata/2.2.0/maven-repository-metadata-2.2.0.pom",
+      "sha1": "7805801e5b7d9eafeb3baf07e864650a62991192"
+    },
+    {
+      "path": "org/apache/maven/maven-settings/2.0.5/maven-settings-2.0.5.pom",
+      "sha1": "87aabc89ef7581c3e8119acf01280a701f446f37"
+    },
+    {
+      "path": "org/apache/maven/maven-settings/2.2.0/maven-settings-2.2.0.pom",
+      "sha1": "2cd4b74ac9ee7d8213fa8b4bb585c36e3dc1e17c"
+    },
+    {
+      "path": "org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.jar",
+      "sha1": "db9f7eb8b6708b7ee46db0f0357fed43ef555793"
+    },
+    {
+      "path": "org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.pom",
+      "sha1": "d2cd1efecdec107c59eff53ac1510f2fc145956f"
+    },
+    {
+      "path": "org/apache/maven/maven/2.2.0/maven-2.2.0.pom",
+      "sha1": "c5bb0fda80306d0d27b3221d511c5032c95b27fa"
+    },
+    {
+      "path": "org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.jar",
+      "sha1": "154f4f29ce3c977061e0943a47ed6b1e6b70347c"
+    },
+    {
+      "path": "org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.pom",
+      "sha1": "35df63bc7e279c775f916724b47b61b7531775f7"
+    },
+    {
+      "path": "org/apache/maven/plugin-tools/maven-plugin-tools/3.1/maven-plugin-tools-3.1.pom",
+      "sha1": "7d23480ccfabb33ee39bbbe01de69c38540e39b3"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-dependency-plugin/2.8/maven-dependency-plugin-2.8.jar",
+      "sha1": "04c8dedf3d9b2a3f45f3daa93e11ca547d2063ca"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-dependency-plugin/2.8/maven-dependency-plugin-2.8.pom",
+      "sha1": "df6ec1e4d0850f1b58c5432e7eb103e87fa197ec"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-install-plugin/2.5.2/maven-install-plugin-2.5.2.jar",
+      "sha1": "8a67631619fc3c1d1f036e59362ddce71e1e496f"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-install-plugin/2.5.2/maven-install-plugin-2.5.2.pom",
+      "sha1": "6247f7b4dc0b0a710e3577c806bf73b35f3fb363"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar",
+      "sha1": "e3200bcf357b5c5e26df072d27df160546bb079a"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom",
+      "sha1": "ae9d54d974e163f260f89ecea8ff6d55e4b0963e"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-plugins/25/maven-plugins-25.pom",
+      "sha1": "8f4f05aaf87c858d2323b3a8fcf37d0fe00ecc75"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.jar",
+      "sha1": "fde20989f12e9b736ff3e556e21bf6d6f222505f"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-shade-plugin/3.2.1/maven-shade-plugin-3.2.1.pom",
+      "sha1": "25e6723f3ecfd15976dba49f7af27e1bb68adab8"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-source-plugin/3.0.1/maven-source-plugin-3.0.1.jar",
+      "sha1": "8693776363c0717712013747a13d087361ce4fb5"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-source-plugin/3.0.1/maven-source-plugin-3.0.1.pom",
+      "sha1": "1344c095857d9e121734267decdf4fd777da71fb"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar",
+      "sha1": "2b435f7f77777d2e62354fdc690da3f1dc47a26b"
+    },
+    {
+      "path": "org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.pom",
+      "sha1": "acfd3ed5fa8d38e8fceb48b06d3363712a91028f"
+    },
+    {
+      "path": "org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.jar",
+      "sha1": "88c2303c3d1f54472cbd39cac11d9a4ad0afca25"
+    },
+    {
+      "path": "org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.pom",
+      "sha1": "bc210876e266e2f3153e96832cbdc5cd3ba53cba"
+    },
+    {
+      "path": "org/apache/maven/reporting/maven-reporting-impl/2.0.5/maven-reporting-impl-2.0.5.jar",
+      "sha1": "a9830b74eaa96dd67a89d82f13a735252cc1c725"
+    },
+    {
+      "path": "org/apache/maven/reporting/maven-reporting-impl/2.0.5/maven-reporting-impl-2.0.5.pom",
+      "sha1": "2308b1d114a8ee45bf4131806c02f26078646a72"
+    },
+    {
+      "path": "org/apache/maven/reporting/maven-reporting/2.0.9/maven-reporting-2.0.9.pom",
+      "sha1": "92fc48457601be497488cc316bc3617326977a24"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-artifact-transfer/0.10.0/maven-artifact-transfer-0.10.0.jar",
+      "sha1": "cb0bc696b1c2380efe81ed2bd628b50d56a3a09b"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-artifact-transfer/0.10.0/maven-artifact-transfer-0.10.0.pom",
+      "sha1": "1556dcd3277b99b33e277db7a40717e0fc441d1f"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.jar",
+      "sha1": "39036a83def48e0ba2a6b3f9ea082473b1ed4b5d"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.pom",
+      "sha1": "e28ce2f08d032ae25c83b9bde56df51e3420d6ff"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-dependency-analyzer/1.4/maven-dependency-analyzer-1.4.jar",
+      "sha1": "2b20e6f9bb568e37ae952063d41b7a6d935dadb9"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-dependency-analyzer/1.4/maven-dependency-analyzer-1.4.pom",
+      "sha1": "c4d24829dcaa5f153f0d3108cfd1fe370a7583f7"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-dependency-tree/2.1/maven-dependency-tree-2.1.jar",
+      "sha1": "29c4d6aeae519809b9af0607156bbdd174efb0bb"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-dependency-tree/2.1/maven-dependency-tree-2.1.pom",
+      "sha1": "772a49d54d50ffe30dbfc50e86ed8318a188746c"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-doxia-tools/1.0.2/maven-doxia-tools-1.0.2.jar",
+      "sha1": "50453155feb184ee951c1b5444555637705cc32b"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-doxia-tools/1.0.2/maven-doxia-tools-1.0.2.pom",
+      "sha1": "c6180757919a5a2e6bdd9f55ebb4adb6a6391ca3"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-invoker/2.0.11/maven-invoker-2.0.11.jar",
+      "sha1": "9c71535d63b58390e5413218ed66012b18902847"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-invoker/2.0.11/maven-invoker-2.0.11.pom",
+      "sha1": "c4a3df6dbe91d3a4303c77cd0ae6f77dc62f357b"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-shared-components/11/maven-shared-components-11.pom",
+      "sha1": "f60de1679753378e91acd5e0b35c53ec1d3cdff7"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-shared-components/12/maven-shared-components-12.pom",
+      "sha1": "bb93c9f13f4d000affb4425632ad00b2082049a3"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.jar",
+      "sha1": "41dcd40e6bf13247698b84977e47c4ec9f41c26c"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-shared-utils/0.4/maven-shared-utils-0.4.pom",
+      "sha1": "20a5f96a873ad02124be3dafded7acba5fdcb70b"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-shared-utils/3.0.1/maven-shared-utils-3.0.1.jar",
+      "sha1": "67e99046630df6c4f4b2c8f2143481240198105e"
+    },
+    {
+      "path": "org/apache/maven/shared/maven-shared-utils/3.0.1/maven-shared-utils-3.0.1.pom",
+      "sha1": "19f3fe560aab10a91c28126ba38fc23163336bdf"
+    },
+    {
+      "path": "org/apache/maven/surefire/maven-surefire-common/2.12.4/maven-surefire-common-2.12.4.jar",
+      "sha1": "95c87b560b12e5217c40c408e643c49258c25ee4"
+    },
+    {
+      "path": "org/apache/maven/surefire/maven-surefire-common/2.12.4/maven-surefire-common-2.12.4.pom",
+      "sha1": "9628d966cb4639e6dee0b68f2af8c97a9f7f16e0"
+    },
+    {
+      "path": "org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.jar",
+      "sha1": "8d3cefe93510468ea493800ed70b269d5e44cee2"
+    },
+    {
+      "path": "org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.pom",
+      "sha1": "cf74a66f099e1ceb09e8c7b0e3037ecdd5e1ab6b"
+    },
+    {
+      "path": "org/apache/maven/surefire/surefire-booter/2.12.4/surefire-booter-2.12.4.jar",
+      "sha1": "eff97d818e540565b1ca0f152c43c17887713868"
+    },
+    {
+      "path": "org/apache/maven/surefire/surefire-booter/2.12.4/surefire-booter-2.12.4.pom",
+      "sha1": "7f01e7926a309628da09423400799204d448bba9"
+    },
+    {
+      "path": "org/apache/maven/surefire/surefire/2.12.4/surefire-2.12.4.pom",
+      "sha1": "1ebdae3514ea7f30a7c814146cf5962c25937a82"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar",
+      "sha1": "97853695be4bba3724512226c4d910fed733e608"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom",
+      "sha1": "8e63c83bf055cf0357669ca934f64c6bf27fc640"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-archiver/2.3/plexus-archiver-2.3.jar",
+      "sha1": "6abb3f7e89a76b9ef95db62f209a8cbb0c03fab2"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-archiver/2.3/plexus-archiver-2.3.pom",
+      "sha1": "a955cd43f140b2717beaf3e9d13bc8468c401eb4"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-archiver/3.3/plexus-archiver-3.3.pom",
+      "sha1": "02b6305028bc5629be421b4453bda0ddafde2bdc"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-components/1.3/plexus-components-1.3.pom",
+      "sha1": "979daf6b32bf4eb1fc8ff51689bf31731651a0c8"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar",
+      "sha1": "d682b4b8c1a92329d5b114a51794ef178168abbe"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.pom",
+      "sha1": "3dda3be2ada841f5ca3976a48281349a99f27e89"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar",
+      "sha1": "5d1890f1099242d6a1a6a46640eed931a96ef67f"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom",
+      "sha1": "d0ad15a280e5bf6c32388cbef26fd7d428fa1623"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-io/2.0.6/plexus-io-2.0.6.jar",
+      "sha1": "ae2ddfcb316ac045cd85792cbfea928b4cfd5b8d"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-io/2.0.6/plexus-io-2.0.6.pom",
+      "sha1": "80663ba325fc5477350b3e27af62b4879d6f5ca8"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-io/2.7.1/plexus-io-2.7.1.jar",
+      "sha1": "e1cce34eca8f2c5fc053e1a15d1405984b527b32"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.jar",
+      "sha1": "faba5d28a07fcde50c8c26d3f002774acf11843e"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-utils/3.0.9/plexus-utils-3.0.9.jar",
+      "sha1": "48362e7b8a6edd68f8ff2e26bfb84ee370a5380b"
+    },
+    {
+      "path": "org/codehaus/plexus/plexus-utils/3.0.9/plexus-utils-3.0.9.pom",
+      "sha1": "259d8924d1f827ee49c7c5b3913f76b18d6055ca"
+    },
+    {
+      "path": "org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar",
+      "sha1": "6f14738ec2e9dd0011e343717fa624a10f8aab64"
+    },
+    {
+      "path": "org/jdom/jdom2/2.0.6/jdom2-2.0.6.pom",
+      "sha1": "11e250d112bc9f2a0e1a595a5f6ecd2802af2691"
+    },
+    {
+      "path": "org/ow2/asm/asm-analysis/7.0-beta/asm-analysis-7.0-beta.pom",
+      "sha1": "e1f7f45f5059156681587feb25ed5a4ef78174d7"
+    },
+    {
+      "path": "org/ow2/asm/asm-analysis/7.0/asm-analysis-7.0.jar",
+      "sha1": "4b310d20d6f1c6b7197a75f1b5d69f169bc8ac1f"
+    },
+    {
+      "path": "org/ow2/asm/asm-analysis/7.0/asm-analysis-7.0.pom",
+      "sha1": "20186ccd5304839aea81893ebc65addc6ad4ca5e"
+    },
+    {
+      "path": "org/ow2/asm/asm-commons/7.0-beta/asm-commons-7.0-beta.pom",
+      "sha1": "71acae290d71afc421dcf4bfa160689c75f9fc58"
+    },
+    {
+      "path": "org/ow2/asm/asm-commons/7.0/asm-commons-7.0.jar",
+      "sha1": "478006d07b7c561ae3a92ddc1829bca81ae0cdd1"
+    },
+    {
+      "path": "org/ow2/asm/asm-commons/7.0/asm-commons-7.0.pom",
+      "sha1": "7b5da826fcab00989f748b7c4f72e75e668da210"
+    },
+    {
+      "path": "org/ow2/asm/asm-tree/7.0-beta/asm-tree-7.0-beta.pom",
+      "sha1": "47287a3bd4c56026efba02b94d05ad08cd2d44ad"
+    },
+    {
+      "path": "org/ow2/asm/asm-tree/7.0/asm-tree-7.0.jar",
+      "sha1": "29bc62dcb85573af6e62e5b2d735ef65966c4180"
+    },
+    {
+      "path": "org/ow2/asm/asm-tree/7.0/asm-tree-7.0.pom",
+      "sha1": "9a26ff62a5b01e4fa15ce96fcdb78738817d3066"
+    },
+    {
+      "path": "org/ow2/asm/asm-util/7.0-beta/asm-util-7.0-beta.jar",
+      "sha1": "5442cb58d07f1fce43b41db9eeff2273c2b10203"
+    },
+    {
+      "path": "org/ow2/asm/asm-util/7.0-beta/asm-util-7.0-beta.pom",
+      "sha1": "735806851ffa04953c873c81aef0f31c43e9c9b0"
+    },
+    {
+      "path": "org/ow2/asm/asm/7.0-beta/asm-7.0-beta.pom",
+      "sha1": "bfe73e227cd788e55c031ceaf8f59983b81bf20d"
+    },
+    {
+      "path": "org/ow2/asm/asm/7.0/asm-7.0.jar",
+      "sha1": "d74d4ba0dee443f68fb2dcb7fcdb945a2cd89912"
+    },
+    {
+      "path": "org/ow2/asm/asm/7.0/asm-7.0.pom",
+      "sha1": "c6b547ce67397df979bde680a1d0cdf8ceb63f6a"
+    },
+    {
+      "path": "org/ow2/ow2/1.5/ow2-1.5.pom",
+      "sha1": "d8edc69335f4d9f95f511716fb689c86fb0ebaae"
+    },
+    {
+      "path": "org/vafer/jdependency/2.1.1/jdependency-2.1.1.jar",
+      "sha1": "5f8306ae6f0466f8a53e1f199ce156794414436f"
+    },
+    {
+      "path": "org/vafer/jdependency/2.1.1/jdependency-2.1.1.pom",
+      "sha1": "4fe3cb78bbf85a065851f334bdd00ff28d737d47"
+    },
+    {
+      "path": "xml-apis/xml-apis/2.0.2/xml-apis-2.0.2.pom",
+      "sha1": "bf2e4baaea312f54f2934c6eb9bbde0a2a4afb07"
+    }
+  ],
+  "groupId": "fr.acinq.eclair",
+  "metas": [],
+  "name": "eclair-hodlplugin_2.11-0.2.0",
+  "remotes": {
+    "central": "https://repo.maven.apache.org/maven2"
+  },
+  "submodules": [
+    {
+      "artifactId": "eclair-hodlplugin_2.11",
+      "groupId": "fr.acinq.eclair",
+      "name": "eclair-hodlplugin_2.11-0.2.0",
+      "path": ".",
+      "version": "0.2.0"
+    }
+  ],
+  "version": "0.2.0"
+}

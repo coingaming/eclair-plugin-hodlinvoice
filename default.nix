@@ -48,10 +48,10 @@ mavenix.buildMaven {
   # Add extra maven dependencies which might not have been picked up
   #   automatically
   #
-#  deps = [
-#    { path = "${eclair}/lib/eclair-core_2.13-0.5.1-SNAPSHOT.jar"; sha1 = "0123456789abcdef"; }
-#  #  { path = "org/group-id/artifactId/version/file.pom"; sha1 = "123456789abcdef0"; }
-#  ];
+  #deps = [
+  #  { path = "${eclair}/share/java/eclair-core_2.13-0.5.1-SNAPSHOT.jar"; sha1 = "0123456789abcdef"; }
+  #  { path = "${eclair}/share/java/eclair-core_2.13-0.5.1-SNAPSHOT.pom"; sha1 = "123456789abcdef0"; }
+  #];
 
   # Add dependencies on other mavenix derivations
   #

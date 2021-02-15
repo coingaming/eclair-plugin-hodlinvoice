@@ -4,7 +4,7 @@
 let nixpkgs = import ./nixpkgs.nix;
     overlays = import ./overlay.nix {};
     pkgs' = if pkgs == null
-            then import nixpkgs {inherit overlays;}
+    then import nixpkgs {inherit overlays;}
             else pkgs;
     vim-ide = import (
       fetchTarball "https://github.com/tim2CF/ultimate-haskell-ide/tarball/a6c2ca747a8b226b9fac51b33600347df61d549f"
@@ -24,7 +24,7 @@ stdenv.mkDerivation {
     jdk11
     maven
     mavenix.cli
-    eclair
+#    eclair
     # test deps
     docker
     bitcoin
