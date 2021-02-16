@@ -7,7 +7,7 @@
       doJailbreak = self.haskell.lib.doJailbreak;
     in
     {
-        eclair = import (fetchTarball "https://github.com/coingaming/eclair/tarball/155eaea98072386662fe212e7cd3d18cb8f12a60") { executable = false;};
+        eclair = import (fetchTarball "https://github.com/coingaming/eclair/tarball/bac4343b5ebe24422f1eafefaf4fc611ba0cdbb9") { executable = false;};
     }
   )
 ]
